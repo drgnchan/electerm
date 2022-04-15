@@ -50,6 +50,9 @@ jobs:
     - run:  npm install -g yarn
     - run:  npm un -S node-powershell
 
+    # script:
+    - run: npm run pre-test
+
     - name: build
       if: "!contains(github.event.head_commit.message, 'skip build')"
       env:
